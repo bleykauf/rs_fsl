@@ -7,3 +7,6 @@ pylint
 rope
 pre-commit
 sphinx
+numpy
+pandas
+pyvisa

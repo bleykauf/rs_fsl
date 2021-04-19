@@ -12,3 +12,6 @@ dependencies:
   - rope
   - pre-commit
   - sphinx
+  - numpy
+  - pandas
+  - pyvisa
