@@ -1,0 +1,4 @@
+include versioneer.py
+include rs_fsl/_version.py
+include README.md
+include LICENSE

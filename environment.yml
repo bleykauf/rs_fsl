@@ -1,0 +1,14 @@
+name: rs_fsl_env
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - pytest
+  - tox
+  - black
+  - flake8
+  - flake8-docstrings
+  - pylint
+  - rope
+  - pre-commit
+  - sphinx
