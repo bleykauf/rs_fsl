@@ -32,7 +32,7 @@ pip install .
 from rs_fsl import FSL
 ```
 
-Connecting to the instrument. If the RS FSL is not connected to the phyics network, the address might be different and can be set manually with the `addr` keyword.
+Connecting to the instrument. If the RS FSL is not connected to the phyics network, the address might be different and can be set manually with the `ip` keyword.
 
 
 ```python
