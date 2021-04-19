@@ -11,7 +11,7 @@
 
 ## Installation
 
-To install `rs_fsl`>
+To install `rs_fsl`, run
 
 ```
 pip install rs_fsl
@@ -29,7 +29,6 @@ pip install .
 
 
 ```python
-import matplotlib.pyplot as plt
 from rs_fsl import FSL
 ```
 
