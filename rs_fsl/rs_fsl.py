@@ -24,7 +24,7 @@ def _to_numeric(string):
 
 
 class FSL:
-    def __init__(self, ip):
+    def __init__(self, ip, announce_connection=False):
         """
         Communication with the Rohde&Schwarz FSL spectrum analyzer via pyvisa. The IP
         address can be found from the R&S FSL by pressing Setup, General Setup, Network
@@ -34,7 +34,8 @@ class FSL:
         addr = "TCPIP0::{}::inst0::INSTR".format(ip)
         rm = visa.ResourceManager()
         self.instr = rm.open_resource(addr)
-        print("Successfully connected to {}".format(self.idn()))
+        if announce_connection:
+            print("Successfully connected to {}".format(self.idn()))
 
     # basic communication with device --------------------------------------------------
 
@@ -161,10 +162,8 @@ class FSL:
     def read_trace(self):
         """Read trace data, returns x (frequency) and y (level)"""
         y = _to_numeric(self.instr.query("TRAC1? TRACE1"))
-        # There is most probably a much better way to due this...
         n = len(y)  # numer of trace points
-        steps = np.arange(n) * self.freq_span / n
-        x = self.freq_start + steps
+        x = np.linspace(self.freq_start, self.freq_stop, n)
         return x, y
 
     @property
