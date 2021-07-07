@@ -161,10 +161,8 @@ class FSL:
     def read_trace(self):
         """Read trace data, returns x (frequency) and y (level)"""
         y = _to_numeric(self.instr.query("TRAC1? TRACE1"))
-        # There is most probably a much better way to due this...
         n = len(y)  # numer of trace points
-        steps = np.arange(n) * self.freq_span / n
-        x = self.freq_start + steps
+        x = np.linspace(self.freq_start, self.freq_stop, n)
         return x, y
 
     @property
