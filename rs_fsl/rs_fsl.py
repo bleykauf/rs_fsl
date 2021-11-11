@@ -2,6 +2,10 @@ import pyvisa as visa
 import numpy as np
 import pandas as pd
 
+from warnings import warn
+
+warn("rs_fsl is deprecated. Use pymeasure instead.", DeprecationWarning)
+
 
 def read_csv(filename):
     """Reads x and y values measured by the spectrum analyzer stored in a csv file."""
