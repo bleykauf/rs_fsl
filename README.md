@@ -1,3 +1,5 @@
+:no_entry: [DEPRECATED] Functionality has been ported to [pymeasure](https://github.com/pymeasure/pymeasure).
+
 # RS FSL ‒ Python interface for the Rohde-Schwarz FSL Spectrum Analyzer
 
 <!---
