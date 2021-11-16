@@ -11,7 +11,6 @@
 [![PyPI](https://img.shields.io/pypi/v/rs_fsl?color=blue)](https://pypi.org/project/rs_fsl/)
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 
-:no_entry: [DEPRECATED] Functionality has been ported to [pymeasure](https://github.com/pymeasure/pymeasure).
 ## Installation
 
 To install `rs_fsl`, run
